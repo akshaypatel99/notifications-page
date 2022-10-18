@@ -1,0 +1,218 @@
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf") format('ttf');
+  font-weight: 200 800;
+}
+
+:root {
+  --red: hsl(1, 90%, 64%);
+  --blue: hsl(219, 85%, 26%);
+  --white: hsl(0, 0%, 100%);
+  --very-light-grayish-blue: hsl(210, 60%, 98%);
+  --light-grayish-blue-1: hsl(211, 68%, 94%);
+  --light-grayish-blue-2: hsl(205, 33%, 90%);
+  --grayish-blue: hsl(219, 14%, 63%);
+  --dark-grayish-blue: hsl(219, 12%, 42%);
+  --very-dark-blue: hsl(224, 21%, 14%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  color: var(--dark-grayish-blue);
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: var(--very-dark-blue);
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  background-color: var(--very-light-grayish-blue);
+}
+
+article {
+  width: 100vw;
+  height: 100%;
+  background-color: var(--white);
+  padding: 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+hgroup {
+  display: flex;
+  align-items: center;
+}
+
+hgroup h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--very-dark-blue);
+}
+
+#total-notifications {
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 0.15rem 0.7rem 0.2rem;
+  border-radius: 6px;
+  margin-left: 0.5rem;
+}
+
+.mark-as-read {
+  background: none;
+  border: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  color: var(--dark-grayish-blue);
+  cursor: pointer;
+}
+
+.mark-as-read:hover {
+  color: var(--blue);
+}
+
+.notifications {
+  margin-top: 1.5rem;
+}
+
+.notification-container {
+  margin-bottom: 0.5rem;
+  display: flex;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.notification-container.unread {
+  background-color: var(--very-light-grayish-blue);
+}
+
+.notification {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.profile-picture {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 1rem;
+}
+
+.notification-text {
+  color: var(--dark-grayish-blue);
+}
+
+.unread .notification-text::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--red);
+  margin-left: 0.25rem;
+}
+
+.profile-name {
+  font-weight: 700;
+  color: var(--very-dark-blue);
+  margin-right: 0.25ch;
+}
+
+.profile-name:hover {
+  color: var(--blue);
+}
+
+.notification-link {
+  color: var(--dark-grayish-blue);
+  font-weight: 700;
+  margin-left: 0.25ch;
+}
+
+.notification-link:hover {
+  color: var(--blue);
+}
+
+.time {
+  color: var(--grayish-blue);
+  margin-top: 0.25rem;
+}
+
+.message {
+  border: 1px solid var(--light-grayish-blue-1);
+  border-radius: 5px;
+  padding: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.message:hover {
+  background-color: var(--light-grayish-blue-1);
+}
+
+.message {
+  color: var(--dark-grayish-blue);
+}
+
+.content-photo {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#photo {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border: 4px solid transparent;
+  border-radius: 10px;
+  margin-left: 0.5rem;
+}
+
+#photo:hover {
+  border: 4px solid  var(--light-grayish-blue-1);
+}
+
+footer {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+}
+
+@media (min-width: 1024px){
+  body {
+    height: 100vh;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  article {
+    width: 50%;
+    height: 85vh;
+    border-radius: 10px;
+    padding: 2rem;
+  }
+}
