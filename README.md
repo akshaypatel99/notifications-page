@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/akshaypatel99/frontend-mentor/tree/main/notifications-page](https://github.com/akshaypatel99/frontend-mentor/tree/main/notifications-page)
+- Solution URL: [https://github.com/akshaypatel99/notifications-page](https://github.com/akshaypatel99/notifications-page)
 - Live Site URL: [https://akshaypatel99.github.io/notifications-page/](https://akshaypatel99.github.io/notifications-page/)
 
 ## My process
